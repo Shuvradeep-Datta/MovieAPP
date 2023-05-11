@@ -25,6 +25,7 @@ public class ConsumerController {
 	@PostMapping("/login")
 	public ResponseEntity<?> consumeLogin(@RequestBody UserDTO userdto) throws RestClientException, Exception{
 		String baseUrl="http://localhost:8084/auth/v1/login";
+		///Its ok
 		
 		RestTemplate restTemplate= new RestTemplate();
 		
