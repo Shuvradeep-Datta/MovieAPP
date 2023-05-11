@@ -1,0 +1,7 @@
+package com.cts.movie.service;
+
+public interface TicketService {
+	
+	public Set<Ticket> getAllTicket(int mid);
+
+}

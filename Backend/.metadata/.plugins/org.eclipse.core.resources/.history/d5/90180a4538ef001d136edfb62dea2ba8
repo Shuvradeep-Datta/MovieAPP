@@ -1,0 +1,9 @@
+package com.cts.movie.model;
+
+public class UserDTO {
+	
+	private String username;
+	private String password;
+	
+
+}

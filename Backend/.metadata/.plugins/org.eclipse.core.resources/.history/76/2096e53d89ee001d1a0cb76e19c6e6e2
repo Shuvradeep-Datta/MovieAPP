@@ -1,0 +1,14 @@
+package com.cts.movie.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Ticket {
+	private int transactionId;
+	private int movie_id_fk;
+	private String movieName;
+	private String theatreName;
+	private int totalTickets;
+	private int seatsBooked;
+	
+}

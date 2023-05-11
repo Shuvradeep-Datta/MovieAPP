@@ -1,0 +1,38 @@
+package com.cts.movie.service;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cts.movie.model.Ticket;
+import com.cts.movie.repository.TicketRepository;
+
+public class TicketServiceImpl  implements TicketService{
+
+	@Autowired
+	private TicketRepository ticketRepository ;
+	
+	@Override
+	public Set<Ticket> getAllTickets(int mid) {
+		Set<Ticket> ticketlist=ticketRepository.getTickeList(mid);
+		return ticketlist;
+	}
+
+	@Override
+	public boolean addTicket(Ticket ticket) {
+		Ticket ticketObj= new Ticket();
+		ticketObj.setMovieName(ticket.getMovieName());
+		ticketObj.setMovie_id_fk(ticket.getMovie_id_fk());
+		ticketObj.setTheatreName(ticket.getTheatreName());
+		ticketRepository.saveAndFlush(ticket);
+		
+		return true;
+	}
+
+	@Override
+	public boolean deleteTicket(int mid) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

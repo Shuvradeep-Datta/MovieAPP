@@ -1,0 +1,70 @@
+package com.cts.movie.model;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Movie {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int movieId;
+	private String movieName;
+	private int totalTickets;
+	private String theatreName;
+	
+	public int getMovieId() {
+		return movieId;
+	}
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
+	}
+	public String getMovieName() {
+		return movieName;
+	}
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+	public int getTotalTickets() {
+		return totalTickets;
+	}
+	public void setTotalTickets(int totalTickets) {
+		this.totalTickets = totalTickets;
+	}
+	public String getTheatreName() {
+		return theatreName;
+	}
+	public void setTheatreName(String theatreName) {
+		this.theatreName = theatreName;
+	}
+	
+	@Override
+	public String toString() {
+		return "Movie [movieId=" + movieId + ", movieName=" + movieName + ", totalTickets=" + totalTickets
+				+ ", theatreName=" + theatreName + "]";
+	}
+	public Movie(int movieId, String movieName, int totalTickets, String theatreName) {
+		super();
+		this.movieId = movieId;
+		this.movieName = movieName;
+		this.totalTickets = totalTickets;
+		this.theatreName = theatreName;
+	}
+	
+	
+	
+	public Movie() {
+		
+	}
+	
+
+	
+	
+	
+	
+	
+
+}

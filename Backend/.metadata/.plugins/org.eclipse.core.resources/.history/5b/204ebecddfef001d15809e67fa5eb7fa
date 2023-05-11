@@ -1,0 +1,22 @@
+package com.cts.movie;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class MovieBookingAppApplication {
+	
+	
+	@Bean
+	public FilterRegistrationBean jwtFilter() {
+		return null;
+		
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(MovieBookingAppApplication.class, args);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.cts.movie.service;
+
+public interface TicketService {
+
+}
